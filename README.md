@@ -39,6 +39,6 @@ For support, please open an issue in the GitHub issue tracker.
 ## Live Demo
 Try the demo [here](https://qdrant-langchain-cohere-ragbot-ui.vercel.app/)
 
-Authors
+## Author
 Developed by [Harshad Suryawanshi](https://www.linkedin.com/in/harshadsuryawanshi/)
 If you find this project useful, consider giving it a ⭐ on GitHub!
