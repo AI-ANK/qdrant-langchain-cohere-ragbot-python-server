@@ -30,6 +30,9 @@ This will launch the FastAPI server, which will be accessible locally.
 - API Framework: FastAPI
 - LLM Integration: Cohere API
 
+## Frontend UI Code
+https://github.com/AI-ANK/qdrant-langchain-cohere-ragbot-ui
+
 ## License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
