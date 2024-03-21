@@ -15,10 +15,30 @@ This backend API server is a core component of an AI-powered document chat appli
 2. **Configuration**:
    - Set environment variables for Cohere API key, Qdrant URL, and Qdrant API key in a `.env` file.
 3. **Installation**:
-   ```bash
-    pip install -r requirements.txt  ```
+   ```
+    pip install -r requirements.txt
+   ```
 4. **Start the Server**:
    ```
    python main.py
    ```
+This will launch the FastAPI server, which will be accessible locally.
 
+## Tools and Technologies
+- LLM Orchestration: Langchain
+- Vector DB and Similarity Search: Qdrant
+- API Framework: FastAPI
+- LLM Integration: Cohere API
+
+## License
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Support
+For support, please open an issue in the GitHub issue tracker.
+
+## Live Demo
+Try the demo [here](https://qdrant-langchain-cohere-ragbot-ui.vercel.app/)
+
+Authors
+Developed by [Harshad Suryawanshi](https://www.linkedin.com/in/harshadsuryawanshi/)
+If you find this project useful, consider giving it a ⭐ on GitHub!
