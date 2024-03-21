@@ -1,4 +1,9 @@
 #!/usr/bin/env python
+from dotenv import load_dotenv
+import os
+# Load environment variables from .env file
+load_dotenv()
+
 from fastapi import FastAPI, File, UploadFile, HTTPException, Depends
 from fastapi.responses import RedirectResponse
 from fastapi.middleware.cors import CORSMiddleware
@@ -21,8 +26,8 @@ import secrets
 
 # Load environment variables
 COHERE_API_KEY = os.getenv("COHERE_API_KEY")
-QDRANT_URL = os.environ['QDRANT_URL']
-QDRANT_API_KEY = os.environ['COHERE_API_KEY']
+QDRANT_URL = os.getenv("QDRANT_URL")
+QDRANT_API_KEY = os.getenv("QDRANT_API_KEY")
 
 # Global variable to track if the document has been uploaded and processed
 document_processed = False

@@ -4,3 +4,4 @@ pypdf
 cohere
 qdrant-client
 langserve[all]
+python-dotenv
