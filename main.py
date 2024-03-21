@@ -19,7 +19,7 @@ from fastapi import Query, Response, Cookie  # Import Query for optional query p
 from qdrant_client.http import models
 import secrets
 
-os.environ["COHERE_API_KEY"] = "sMF0Zvjvf5Kezq4YGHukV91mRARqfEExA2HiQscX"
+os.environ["COHERE_API_KEY"] = "jFszQcWmd3Rp1QnurlLIEZutXnFdc8EGGJxntutX"
 
 # Load environment variables
 COHERE_API_KEY = os.getenv("COHERE_API_KEY")
