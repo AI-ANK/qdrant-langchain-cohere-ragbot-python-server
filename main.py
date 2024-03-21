@@ -163,9 +163,6 @@ class ChatResponse(BaseModel):
   response: str
 
 
-print(QDRANT_URL)
-print(QDRANT_API_KEY)
-
 
 @app.post("/rag", response_model=ChatResponse)
 async def rag_endpoint(question: Question, group_id: str):
