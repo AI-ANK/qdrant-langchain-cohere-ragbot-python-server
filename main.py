@@ -19,12 +19,10 @@ from fastapi import Query, Response, Cookie  # Import Query for optional query p
 from qdrant_client.http import models
 import secrets
 
-os.environ["COHERE_API_KEY"] = "jFszQcWmd3Rp1QnurlLIEZutXnFdc8EGGJxntutX"
-
 # Load environment variables
 COHERE_API_KEY = os.getenv("COHERE_API_KEY")
-QDRANT_URL = "https://cd70b5b7-8cbf-4b34-b706-2a690d044749.us-east4-.gcp.cloud.qdrant.io:6333"
-QDRANT_API_KEY = "7T-T4HLAYtThlT-uilLdxtyLjylHWn7USVZ9O5rVZ5sLY6iq0ZB1Gg"
+QDRANT_URL = os.environ['QDRANT_URL']
+QDRANT_API_KEY = os.environ['COHERE_API_KEY']
 
 # Global variable to track if the document has been uploaded and processed
 document_processed = False
@@ -62,8 +60,8 @@ qdrant_client = Qdrant(client, collection_name, embeddings)
 #     data,
 #     embeddings,
 #     url=
-#     "https://cd70b5b7-8cbf-4b34-b706-2a690d044749.us-east4-0.gcp.cloud.qdrant.io:6333",
-#     api_key="7T-T4HLAYtThlT-uilLdxtyLjylHWn7USVZ9O5rVZ5sLY6iq0ZB1Gg",
+#     "",
+#     api_key="",
 #     collection_name="my_documents",
 # )
 
@@ -144,9 +142,8 @@ async def upload_document(response: Response, file: UploadFile = File(...)):
   qdrant_client = Qdrant.from_documents(
       all_splits,
       embeddings,
-      url=
-      "https://cd70b5b7-8cbf-4b34-b706-2a690d044749.us-east4-0.gcp.cloud.qdrant.io:6333",
-      api_key="7T-T4HLAYtThlT-uilLdxtyLjylHWn7USVZ9O5rVZ5sLY6iq0ZB1Gg",
+      url=QDRANT_URL,
+      api_key=QDRANT_API_KEY,
       collection_name="my_documents",
       metadata_payload_key="metadata",
       quantization_config=models.BinaryQuantization(
