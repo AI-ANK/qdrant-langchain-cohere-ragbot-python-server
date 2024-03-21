@@ -1,0 +1,6 @@
+pydantic==1.10.13
+python-multipart
+pypdf
+cohere
+qdrant-client
+langserve[all]
